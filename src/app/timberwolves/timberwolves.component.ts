@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../service/players.service';
 
 @Component({
-  selector: 'app-bucks',
-  templateUrl: './bucks.component.html',
-  styleUrls: ['./bucks.component.scss']
+  selector: 'app-timberwolves',
+  templateUrl: './timberwolves.component.html',
+  styleUrls: ['./timberwolves.component.scss']
 })
-export class BucksComponent implements OnInit {
+export class TimberwolvesComponent implements OnInit {
 
   players: any
-  teamId: number = 3
+  teamId: number = 15
   constructor(public playersService: PlayersService) { 
     this.players = this.playersService.getPlayerByTeam(this.teamId)
   }
@@ -20,4 +20,5 @@ export class BucksComponent implements OnInit {
     }, 1000);
     console.log(this.players)
   }
+
 }

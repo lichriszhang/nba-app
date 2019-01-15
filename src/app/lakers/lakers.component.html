@@ -1,27 +1,34 @@
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <!-- 指示符 -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <!-- 轮播图片 -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://7n.w3cschool.cn/attachments/knowledge/201803/24575.png">
-    </div>
-    <div class="carousel-item">
-      <img src="https://7n.w3cschool.cn/attachments/knowledge/201801/31740.png">
-    </div>
-    <div class="carousel-item">
-      <img src="https://7n.w3cschool.cn/attachments/knowledge/201804/30601.png">
-    </div>
+<div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>NUMBER</th>
+          <th>NAME</th>
+          <th>TEAM</th>
+          <th>SCORE</th>
+          <th>ASSIST</th>
+          <th>REBOUND</th>
+          <th>STEAL</th>
+          <th>BLOCK</th>
+          <th>MISS</th>
+          <th>THREEPOINT</th>
+          <th>PLAYTIME</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of players">
+        <tr>
+          <td>{{item.number}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.team}}</td>
+          <td>{{item.score}}</td>
+          <td>{{item.assist}}</td>
+          <td>{{item.rebound}}</td>
+          <td>{{item.steal}}</td>
+          <td>{{item.block}}</td>
+          <td>{{item.miss}}</td>
+          <td>{{item.threePoint}}</td>
+          <td>{{item.playTime}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <!-- 左右切换按钮 -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>

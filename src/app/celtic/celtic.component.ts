@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayersService } from '../service/players.service';
 
 @Component({
   selector: 'app-celtic',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CelticComponent implements OnInit {
 
-  constructor() { }
+  players: any
+  teamId: number = 4
+  constructor(public playersService: PlayersService) { 
+    this.players = this.playersService.getPlayerByTeam(this.teamId)
+  }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.players = this.playersService.getPlayerByTeam(this.teamId)
+    }, 1000);
+    console.log(this.players)
   }
 
 }

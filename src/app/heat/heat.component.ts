@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { PlayersService } from '../service/players.service';
 
 @Component({
-  selector: 'app-bucks',
-  templateUrl: './bucks.component.html',
-  styleUrls: ['./bucks.component.scss']
+  selector: 'app-heat',
+  templateUrl: './heat.component.html',
+  styleUrls: ['./heat.component.scss']
 })
-export class BucksComponent implements OnInit {
+export class HeatComponent implements OnInit {
 
   players: any
-  teamId: number = 3
+  teamId: number = 5
   constructor(public playersService: PlayersService) { 
     this.players = this.playersService.getPlayerByTeam(this.teamId)
   }

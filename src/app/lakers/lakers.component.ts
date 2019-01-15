@@ -1,3 +1,4 @@
+import { PlayersService } from './../service/players.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,12 +9,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LakersComponent implements OnInit {
 
-  constructor(public http: HttpClient) { }
+  players: any
+  teamId: number = 1
+  constructor(public playersService: PlayersService) { 
+    this.players = this.playersService.getPlayerByTeam(this.teamId)
+  }
 
   ngOnInit() {
-    this.http.jsonp("http://localhost:8080/teams", "teamId").subscribe((data) => {
-      console.log(data)
-    })
+    setTimeout(() => {
+      this.players = this.playersService.getPlayerByTeam(this.teamId)
+    }, 1000);
+    console.log(this.players)
   }
 
 }
