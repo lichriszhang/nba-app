@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { TeamsService } from '../service/teams.service';
 
 @Component({
-  selector: 'app-nba',
+  selector   : 'app-nba',
   templateUrl: './nba.component.html',
-  styleUrls: ['./nba.component.scss']
+  styleUrls  : ['./nba.component.scss']
 })
 export class NbaComponent implements OnInit {
   teams: any
