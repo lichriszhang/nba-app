@@ -28,52 +28,116 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'lakers', component: LakersComponent
+    path: 'lakers', component: LakersComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },
   {
-    path: 'rocket', component: RocketsComponent
+    path: 'rocket', component: RocketsComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },
   {
-    path: 'bucks', component: BucksComponent
+    path: 'bucks', component: BucksComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },
   {
-    path: 'celtic', component: CelticComponent
+    path: 'celtic', component: CelticComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   }, 
   {
-    path: 'warrion', component: WarrionComponent
+    path: 'warrion', component: WarrionComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },
   {
-    path: 'raptors', component: RaptorsComponent
+    path: 'raptors', component: RaptorsComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   }, 
   {
-    path: 'nuggets', component: NuggetsComponent
+    path: 'nuggets', component: NuggetsComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },   
   {
-    path: 'thunder', component: ThunderComponent
+    path: 'thunder', component: ThunderComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'spurs', component: SpursComponent
+    path: 'spurs', component: SpursComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'pelicans', component: PelicansComponent
+    path: 'pelicans', component: PelicansComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: '76ers', component: SixersComponent
+    path: '76ers', component: SixersComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'timberwolves', component: TimberwolvesComponent
+    path: 'timberwolves', component: TimberwolvesComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'pacers', component: PacersComponent
+    path: 'pacers', component: PacersComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'blazers', component: BlazersComponent
+    path: 'blazers', component: BlazersComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'heat', component: HeatComponent
+    path: 'heat', component: HeatComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   },  
   {
-    path: 'clippers', component: ClippersComponent
+    path: 'clippers', component: ClippersComponent, children: [
+      {
+        path: ':playerNumber/:teamId', component: MatchComponent
+      }
+    ]
   }, 
   {
     path: '**', component: NbaComponent

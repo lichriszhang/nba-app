@@ -19,7 +19,6 @@ export class LakersComponent implements OnInit {
     setTimeout(() => {
       this.players = this.playersService.getPlayerByTeam(this.teamId)
     }, 1000);
-    console.log(this.players)
   }
 
 }

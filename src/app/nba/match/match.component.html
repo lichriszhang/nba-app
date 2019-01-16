@@ -1,3 +1,30 @@
-<p>
-  match works!
-</p>
+<div class="container">
+  <!-- 模态框 -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h4 class="modal-title">Player Info</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          <div class="card">
+            <div class="card-header">NAME: &nbsp;&nbsp; {{playerDetail.name}} &nbsp;&nbsp;<img style="width: 20px;height: 30px" [src]="playerDetail.image" alt=""></div>
+            <div class="card-body">NUMBER: &nbsp;&nbsp;  {{playerDetail.number}}</div> 
+            <div class="card-body">TEAM: &nbsp;&nbsp;  {{playerDetail.team}}</div> 
+            <div class="card-body">AGE: &nbsp;&nbsp;  {{playerDetail.age}}YEAR</div> 
+            <div class="card-body">HEIGHT: &nbsp;&nbsp;  {{playerDetail.height}}CM</div> 
+            <div class="card-body">PLAYTIME: &nbsp;&nbsp;  {{playerDetail.playTime}}MIN</div> 
+            <div class="card-footer">YEAR: &nbsp;&nbsp;  {{playerDetail.playersYear}}</div>
+          </div>
+        </div>
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

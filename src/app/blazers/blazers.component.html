@@ -16,9 +16,9 @@
         </tr>
       </thead>
       <tbody *ngFor="let item of players">
-        <tr>
+        <tr [routerLink]="[ '/blazers', item.number, item.team]" data-toggle="modal" data-target="#myModal">
           <td>{{item.number}}</td>
-          <td>{{item.name}}</td>
+          <td>{{item.name}}</td> 
           <td>{{item.team}}</td>
           <td>{{item.score}}</td>
           <td>{{item.assist}}</td>
@@ -31,4 +31,6 @@
         </tr>
       </tbody>
     </table>
+    <router-outlet></router-outlet>
   </div>
+  
