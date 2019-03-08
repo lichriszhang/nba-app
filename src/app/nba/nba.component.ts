@@ -10,12 +10,12 @@ import { TeamsService } from '../service/teams.service';
 export class NbaComponent implements OnInit {
   teams: any
   constructor(public teamsService: TeamsService) {
-    this.teams = this.teamsService.getAllInfo()
+    this.teamsService.getAllInfo().subscribe((data) => {
+      this.teams = data;
+    });
    }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.teams = this.teamsService.getAllInfo()
-    }, 1000);
+    
   }
 }

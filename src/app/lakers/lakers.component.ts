@@ -12,13 +12,14 @@ export class LakersComponent implements OnInit {
   players: any
   teamId: number = 1
   constructor(public playersService: PlayersService) { 
-    this.players = this.playersService.getPlayerByTeam(this.teamId)
+    this.playersService.getPlayerByTeam(this.teamId).subscribe((data) => {
+      this.players = data;
+    });
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.players = this.playersService.getPlayerByTeam(this.teamId)
-    }, 1000);
+    
   }
 
+  
 }

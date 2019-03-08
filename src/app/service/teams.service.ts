@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { TEAMS } from './../teams';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,15 @@ export class TeamsService {
   teams: any
   constructor(public http: HttpClient) { }
 
-  public getAllInfo() {
-    this.http.get('http://localhost:8080/teams/all').subscribe((data) => {
-      this.teams = data
-    })
-    console.log(this.teams)
-    return this.teams
+  public getAllInfo(): any {
+    return new Observable((observe) => {
+      const searchURL = 'http://localhost:8080/teams/all';
+      this.http.get(searchURL).subscribe(
+        (data) => {
+          observe.next(data);
+        }
+      );
+    });
   }
 
 }
